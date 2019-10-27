@@ -1,16 +1,23 @@
+/**
+ * @file listener.cpp
+ * @author Raja Srinivas Iskala
+ * @copyright 2019
+ * @copyright BSD 3-Clause
+ * @brief This code is a Ros listener node that subscribes to
+ * on topic called chatter taken from ROS tutorials page.
+ */
+
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 
 /**
  * This tutorial demonstrates simple receipt of messages over the ROS system.
  */
-void chatterCallback(const std_msgs::String::ConstPtr& msg)
-{
+void chatterCallback(const std_msgs::String::ConstPtr& msg) {
   ROS_INFO("I heard: [%s]", msg->data.c_str());
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line.
@@ -45,7 +52,7 @@ int main(int argc, char **argv)
    * is the number of messages that will be buffered up before beginning to throw
    * away the oldest ones.
    */
-  ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
+  auto sub = n.subscribe("chatter", 1000, chatterCallback);
 
   /**
    * ros::spin() will enter a loop, pumping callbacks.  With this version, all
@@ -56,3 +63,4 @@ int main(int argc, char **argv)
 
   return 0;
 }
+

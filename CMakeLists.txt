@@ -60,15 +60,15 @@ include_directories(include
 
 
 ## Declare a C++ executable
-add_executable(${listener} src/listener.cpp)
-add_executable(${talker} src/talker.cpp)
+add_executable(listener src/listener.cpp)
+add_executable(talker src/talker.cpp)
 
 
 ## Specify libraries to link a library or executable target against
- target_link_libraries(${listener}
+ target_link_libraries(listener
    ${catkin_LIBRARIES}
  )
- target_link_libraries(${talker}
+ target_link_libraries(talker
    ${catkin_LIBRARIES}
  )
 

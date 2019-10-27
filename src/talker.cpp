@@ -1,3 +1,12 @@
+/**
+ * @file talker.cpp
+ * @author Raja Srinivas Iskala
+ * @copyright 2019
+ * @copyright BSD 3-Clause
+ * @brief This code is a Ros publisher node that publishes a string message
+ * on topic called chatter taken from ROS tutorials page.
+ */
+
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 
@@ -6,8 +15,7 @@
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
    * any ROS arguments and name remapping that were provided at the command line.
@@ -44,7 +52,8 @@ int main(int argc, char **argv)
    * than we can send them, the number here specifies how many messages to
    * buffer up before throwing some away.
    */
-  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
+  auto chatter_pub = n.advertise < std_msgs::String
+      > ("chatter", 1000);
 
   ros::Rate loop_rate(10);
 
@@ -53,8 +62,7 @@ int main(int argc, char **argv)
    * a unique string for each message.
    */
   int count = 0;
-  while (ros::ok())
-  {
+  while (ros::ok()) {
     /**
      * This is a message object. You stuff it with data, and then publish it.
      */
@@ -80,6 +88,6 @@ int main(int argc, char **argv)
     ++count;
   }
 
-
   return 0;
 }
+
