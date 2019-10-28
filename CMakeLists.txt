@@ -14,34 +14,6 @@ find_package(catkin REQUIRED COMPONENTS
   genmsg
 )
 
-## Generate messages in the 'msg' folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )
-
-## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
-
-## Generate actions in the 'action' folder
-# add_action_files(
-#   FILES
-#   Action1.action
-#   Action2.action
-# )
-
-## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
-
-
 ###################################
 ## Declare catkin package ##
 ###################################
@@ -58,11 +30,9 @@ include_directories(include
   ${catkin_INCLUDE_DIRS}
 )
 
-
 ## Declare a C++ executable
 add_executable(listener src/listener.cpp)
 add_executable(talker src/talker.cpp)
-
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(listener
