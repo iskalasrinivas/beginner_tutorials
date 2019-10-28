@@ -21,9 +21,9 @@ mkdir -p ~/catkin_ws/src\
 cd catkin_ws\
 source devel/setup.bash\
 cd src\
-git clone https://github.com/iskalasrinivas/beginner_tutorials.git\
+git clone https://github.com/iskalasrinivas/beginner_tutorials.git \
 cd ..\
-catkin_make
+catkin_make 
 
 
 ## Run instructions
