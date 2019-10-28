@@ -16,13 +16,13 @@ roscpp, rosgraph, ros_environment, rospack, roslib, rospy.
 
 ## build instructions in terminal
 
-source /opt/ros/kinetic/setup.bash 
-mkdir -p ~/catkin_ws/src
-cd catkin_ws
-source devel/setup.bash
-cd src/
-git clone https://github.com/iskalasrinivas/beginner_tutorials.git
-cd ..
+source /opt/ros/kinetic/setup.bash\
+mkdir -p ~/catkin_ws/src\
+cd catkin_ws\
+source devel/setup.bash\
+cd src\
+git clone https://github.com/iskalasrinivas/beginner_tutorials.git\
+cd ..\
 catkin_make
 
 
