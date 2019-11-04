@@ -1,6 +1,9 @@
+# request
 
 string baseString
 
 ---
+
+# response
 
 string changedBaseString
