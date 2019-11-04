@@ -44,6 +44,7 @@ The nodes has to be running to use the service.
 ## ROS Launch
 
 We can launch both nodes simultaneously by using roslaunch beginner_tutorials week10HW.launch\
+roslaunch begineer_tutorials week10HW.launch frequency:= 10\
 usage roslaunch [package name][launch file name]\
 This also launches the master node in case master not running.
 
