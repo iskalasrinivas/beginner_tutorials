@@ -67,6 +67,13 @@ bool changeString(
 /**
  * This tutorial demonstrates simple sending of messages over the ROS system.
  */
+
+/**
+ * @brief the main function of the talker file
+ * @param argc  Specifies the number of elements within argv
+ * @param argv  Array of c-string pointers
+ * @return 0 int
+ */
 int main(int argc, char **argv) {
   /**
    * The ros::init() function needs to see argc and argv so that it can perform
