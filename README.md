@@ -52,4 +52,8 @@ This also launches the master node in case master not running.
 to run RQT_ console: In a new terminal enter the command rqt_console .\
 to run rqt_logger : run rosrun rqt_logger_level rqt_logger_level .
 
+## Cppcheck
+
+use this command for cppcheck:\
+cppcheck --enable=all --std=c++11 -I ../../devel/include/ -I ../../../../../../../opt/ros/kinetic/include/ -I ../../../../../../../usr/include/ --check-config --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" )
 
