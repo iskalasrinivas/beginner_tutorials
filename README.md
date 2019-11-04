@@ -5,7 +5,7 @@
 
 ## Overview
 
-This repository has ROS subscriber and publisher nodes written in c++. These nodes are provided in ROS tutorials. publisher is talker.cpp, subscriber is listener.cpp, topic is "chatter". talker.cpp and listener.cpp are ros nodes.
+This repository has ROS subscriber and publisher nodes written in c++. These nodes are provided in ROS tutorials. publisher is talker.cpp, subscriber is listener.cpp, topic is "chatter". talker.cpp and listener.cpp are ros nodes. This repository also provides overview of using rosservices, roslaunch files. A ros service is created in talker.cpp file that takes a string from user and updates the message. A launch file is created that launches both talker and listener nodes simultaneously, can also set user defined frequency for communicattion between nodes.
 
 ## Dependencies
 Distro: ROS Kinetic
