@@ -32,23 +32,23 @@ The above commands creates executable for listener and talker. open terminal
 create master with roscore.
 
 in new terminal
-rosrun beginner_tutorials talker
+rosrun beginner_tutorials talker\
 rosrun beginner_tutorials listener
 
 ## Using ROS Service
 
-Make a service call to the service /changeBaseString
-rosservice call /changeBaseString "pass the new message in quotes."
+Make a service call to the service /changeBaseString\
+rosservice call /changeBaseString "pass the new message in quotes."\
 The nodes has to be running to use the service.
 
 ## ROS Launch
 
-We can launch both nodes simultaneously by using roslaunch beginner_tutorials week10HW.launch
-usage roslaunch [package name][launch file name]
+We can launch both nodes simultaneously by using roslaunch beginner_tutorials week10HW.launch\
+usage roslaunch [package name][launch file name]\
 This also launches the master node in case master not running.
 
 ## RQT_Console and RQT_logger
-to run RQT_ console: In a new terminal enter the command rqt_console .
+to run RQT_ console: In a new terminal enter the command rqt_console .\
 to run rqt_logger : run rosrun rqt_logger_level rqt_logger_level .
 
 
