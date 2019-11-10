@@ -43,6 +43,7 @@
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include "beginner_tutorials/changeBaseString.h"
+#include "tf/transform_broadcaster.h"
 
 /**
  * Default string message
@@ -93,6 +94,12 @@ int main(int argc, char **argv) {
    * NodeHandle destructed will close down the node.
    */
   ros::NodeHandle n;
+
+  // create a broadcaster object
+  static tf::TransformBroadcaster broadcaster;
+
+  // create a tf transform object
+  tf::Transform transform;
 
   // declaring variable to denote loop frequency to 5 Hz default.
   int rate = 5;
@@ -168,6 +175,18 @@ int main(int argc, char **argv) {
      * in the constructor above.
      */
     chatter_pub.publish(msg);
+
+    // set rotation using roll pitch yaw
+    tf::Quaternion quaternion;
+    quaternion.setRPY(0, 0, 1);
+    transform.setRotation(quaternion);
+
+    // setting translation
+    transform.setOrigin(tf::Vector3(5.0, 5.0, 0.0));
+
+    // broadcast this transform
+    broadcaster.sendTransform(
+        tf::StampedTransform(transform, ros::Time::now(), "world", "talk"));
 
     ros::spinOnce();
 
