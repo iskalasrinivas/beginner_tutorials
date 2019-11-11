@@ -44,12 +44,12 @@
 #include "std_msgs/String.h"
 #include "tf/transform_broadcaster.h"
 #include "beginner_tutorials/changeBaseString.h"
-
+#include "talk/talker.h"
 
 /**
- * Default string message
+ * object of DefaultMessage struct
  */
-std::string defaultMessage = "Hello Raja!";
+DefaultMessage message;
 
 /**
  * @brief  callback function for the Service changeBaseString
@@ -60,7 +60,7 @@ std::string defaultMessage = "Hello Raja!";
 bool changeString(
     beginner_tutorials::changeBaseString::Request &requestService,
     beginner_tutorials::changeBaseString::Response &responseClient) {
-  defaultMessage = requestService.baseString;
+  message.defaultMessage = requestService.baseString;
   ROS_WARN_STREAM("Client has modified the default text to :");
   responseClient.changedBaseString = requestService.baseString;
   return true;
@@ -164,7 +164,7 @@ int main(int argc, char **argv) {
     std_msgs::String msg;
 
     std::stringstream ss;
-    ss << defaultMessage;
+    ss << message.defaultMessage;
     msg.data = ss.str();
 
     ROS_INFO("%s", msg.data.c_str());
