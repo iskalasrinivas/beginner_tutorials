@@ -49,7 +49,7 @@
 /**
  * Default string message
  */
-extern std::string defaultMessage = "Hello Raja!";
+std::string defaultMessage = "Hello Raja!";
 
 /**
  * @brief  callback function for the Service changeBaseString
