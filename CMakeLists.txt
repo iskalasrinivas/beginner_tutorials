@@ -50,3 +50,21 @@ add_executable(talker src/talker.cpp)
    ${catkin_LIBRARIES}
  )
 
+## Testing
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest_gtest(
+  talkertest
+  test/main.cpp
+  test/talkertest.cpp
+  )
+  target_link_libraries(
+  talkertest
+  ${catkin_LIBRARIES}
+  )
+  add_dependencies(
+  talker
+  talkertest
+  ${catkin_EXPORTED_TARGETS}
+  )
+endif()
