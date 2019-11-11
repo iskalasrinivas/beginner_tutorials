@@ -86,6 +86,12 @@ rosrun tf tf_echo /world /talk
 To view rqt_tree\
 rosrun rqt_tf_tree rqt_tf_tree
 
+## ROS Unit testing framework
+
+To run all tests\
+cd ~/catkin_ws\
+rostest beginner_tutorials talkertest.launch
+
 ## Cppcheck
 
 use this command for cppcheck:\
