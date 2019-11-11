@@ -64,7 +64,7 @@ In another terminal\
 cd ~/catkin_ws/src/beginner_tutorials/results\
 rosbag play allTopicsRecord.bag
 
-Recording rosbag with launch file
+Recording rosbag with launch file\
 roslaunch beginner_tutorials week10HW.launch rosbagEnable:=true
 
 ## TF frames
