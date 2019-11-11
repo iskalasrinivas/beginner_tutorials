@@ -41,7 +41,12 @@
 #include "ros/service_client.h"
 #include "beginner_tutorials/changeBaseString.h"
 
-TEST(testTalkerNode, testServiceExistence) {
+/**
+ * @brief Testing for service existence
+ * @param testNodeTalker testSuite
+ * @param serviceExistenceTest name of the test
+ */
+TEST(testNodeTalker, testServiceExistence) {
   // node handle
   ros::NodeHandle nodeHandler;
   // calling service client method
@@ -51,7 +56,13 @@ TEST(testTalkerNode, testServiceExistence) {
   EXPECT_TRUE(client.waitForExistence(ros::Duration(5)));
 }
 
-TEST(testTalkerNode, testServiceMessageUpdate) {
+/**
+ * @brief Testing if service working with change in input
+ * string. 
+ * @param testNodeTalker testSuite
+ * @param testServiceMessageUpdate name of the test
+ */
+TEST(testNodeTalker, testServiceMessageUpdate) {
   // node handle
   ros::NodeHandle nodeHandler;
 
