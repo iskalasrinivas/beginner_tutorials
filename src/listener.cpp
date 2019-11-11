@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2019, RAJA SRINIAS ISKALA
+ * Copyright (c) 2019, RAJA SRINIVAS ISKALA
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
