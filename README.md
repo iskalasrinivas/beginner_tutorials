@@ -58,11 +58,33 @@ rosbag record --duration=15s /chatter\
 To play the recorded bag file\
 cd ~/catkin_ws\
 roscore in a terminal\
-rosrun beginner_tutorials listener\
+rosrun beginner_tutorials listener
 
 In another terminal\
 cd ~/catkin_ws/src/beginner_tutorials/results\
 rosbag play allTopicsRecord.bag
+
+## TF frames
+Talker.cpp is modified to add a broadcaster that broadcasts the transformation between /talk frame with respect\ 
+to /world frame. The transformation between these two frames is broadcasted as a transform.
+
+Run this first
+
+cd ~/catkin_ws\
+roscore in a terminal\
+rosrun beginner_tutorials talker
+
+To view frames sent 
+
+rosrun tf view_frames  in new terminal\
+evince frames.pdf to see the frames
+
+Echo values in terminal
+
+rosrun tf tf_echo /world /talk
+
+To view rqt_tree\
+rosrun rqt_tf_tree rqt_tf_tree
 
 ## Cppcheck
 
