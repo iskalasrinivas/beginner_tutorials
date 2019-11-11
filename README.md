@@ -64,6 +64,9 @@ In another terminal\
 cd ~/catkin_ws/src/beginner_tutorials/results\
 rosbag play allTopicsRecord.bag
 
+Recording rosbag with launch file
+roslaunch beginner_tutorials week10HW.launch rosbagEnable:=true
+
 ## TF frames
 Talker.cpp is modified to add a broadcaster that broadcasts the transformation between /talk frame with respect\ 
 to /world frame. The transformation between these two frames is broadcasted as a transform.
