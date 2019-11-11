@@ -52,6 +52,18 @@ This also launches the master node in case master not running.
 to run RQT_ console: In a new terminal enter the command rqt_console .\
 to run rqt_logger : run rosrun rqt_logger_level rqt_logger_level .
 
+## Rosbag
+To record using rosbag for 15sec use the following command\
+rosbag record --duration=15s /chatter\
+To play the recorded bag file\
+cd ~/catkin_ws\
+roscore in a terminal\
+rosrun beginner_tutorials listener\
+
+In another terminal\
+cd ~/catkin_ws/src/beginner_tutorials/results\
+rosbag play allTopicsRecord.bag
+
 ## Cppcheck
 
 use this command for cppcheck:\
