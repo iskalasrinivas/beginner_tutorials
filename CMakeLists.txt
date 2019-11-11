@@ -50,11 +50,16 @@ add_executable(talker src/talker.cpp)
    ${catkin_LIBRARIES}
  )
 
+add_dependencies(talker beginner_tutorials_generate_messages_cpp)
+add_dependencies(listener beginner_tutorials_generate_messages_cpp)
+
+
 ## Testing
 if(CATKIN_ENABLE_TESTING)
   find_package(rostest REQUIRED)
   add_rostest_gtest(
   talkertest
+  test/talkertest.launch
   test/main.cpp
   test/talkertest.cpp
   )
